@@ -81,7 +81,7 @@ public class Camisa {
         this.totalD = totalD;
     }
 
-    public double vender() {
+    public double venderCamisa() {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("¿Cuántas camisas desea comprar?");
@@ -126,13 +126,17 @@ public class Camisa {
         System.out.println("------------------------------------------------------------");
         System.out.println("El total de la compra es: " + total);
         System.out.println("------------------------------------------------------------");
-        System.out.println("\nEl total de su compra con descuento es:" );
         
+        return total;
+    }
+    
+    public double hacerDescuento(){
         totalD = total * descuento;
         totalFinal = total - totalD;
+        System.out.println("\nEl total de su compra con descuento es:" );        
         System.out.println(totalFinal);
-
-        return 0;
+        
+        return totalFinal;
     }
 
 }

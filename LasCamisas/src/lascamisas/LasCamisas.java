@@ -26,7 +26,8 @@ public class LasCamisas {
         System.out.println("------------------------------------------------------------");
         
         Camisa camisa = new Camisa();
-        camisa.vender();
+        camisa.venderCamisa();
+        camisa.hacerDescuento();
         
     }
     

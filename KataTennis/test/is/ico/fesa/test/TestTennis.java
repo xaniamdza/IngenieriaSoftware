@@ -46,4 +46,13 @@ public class TestTennis {
         int esperado = 1;
         assertEquals(esperado, objeto.ganadorFinal());
     }
+    
+    @Test
+    public void jugarTennis(){
+        objeto.setR1(1);
+        objeto.setPuntaje1(0);
+        int esperado = 15;
+        assertEquals(esperado, objeto.jugarTennis());
+    }
+    
 }

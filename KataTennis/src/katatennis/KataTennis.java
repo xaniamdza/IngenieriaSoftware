@@ -10,6 +10,7 @@ public class KataTennis {
         System.out.println("***********************************************");
         
         Tennis tennis = new Tennis();
+        tennis.iniciarJuego();
         tennis.jugarTennis();
         tennis.ganadorFinal();
       

@@ -100,13 +100,25 @@ public class Tennis {
     public void setVictoria2(int victoria2) {
         this.victoria2 = victoria2;
     }
-
-    public int jugarTennis() {
-
+    
+    public int iniciarJuego(){
         Scanner teclado = new Scanner(System.in);
-
+        
         System.out.println("¿Desea iniciar el juego de tennis?\n 1)Si\n 2)No");
         set = teclado.nextInt();
+        
+        if (set == 1){
+            System.out.println("Juego iniciado");
+            
+        } else{
+            System.out.println("Fin del juego");
+        }
+        return set;
+    }
+
+    public int jugarTennis() {
+        Scanner teclado = new Scanner(System.in);
+
         while (set == 1) {
             System.out.println("¿El jugador 1 anotó punto?\n 1)Si\n 2)No");
             r1 = teclado.nextInt();
@@ -192,7 +204,7 @@ public class Tennis {
         if (victoria1 > victoria2) {
             System.out.println("EL JUGADOR 1 GANÓ EL JUEGO");
             ganadorFinal = victoria1;
-        } else {
+        } else if (victoria2 > victoria1){
             System.out.println("EL JUGADOR 2 GANÓ EL JUEGO");
             ganadorFinal = victoria2;
         }
